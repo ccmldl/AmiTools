@@ -23,12 +23,11 @@ class AmiTools(object):
         self.kwargs = kwargs
         self.__initLog()
         self.logger = logger
-        self.diagnose = False
         
     def __initLog(self):
         logDir = self.kwargs.get("LogDir", "./log")
         logFileName = os.path.join(logDir, datetime.now().strftime("%Y%m%d") + ".log")
-        logger.add(logFileName, format="{time:YYYY-MM-DD HH:mm:ss} - {file} - {line} - {level}: {message}", diagnose=self.diagnose)
+        logger.add(logFileName, format="{time:YYYY-MM-DD HH:mm:ss} - {file} - {line} - {level}: {message}")
     
     def initSession(self):
         connStr = self.kwargs.get("ConnString", "")
@@ -62,11 +61,7 @@ class AmiTools(object):
     def __getLogger(self):
         return self.logger
     
-    def __setDiagnose(self):
-        self.diagnose = True
-    
     loggers = property(__getLogger)
-    diagnose = property(__setDiagnose)
         
         
 if __name__ == '__main__':

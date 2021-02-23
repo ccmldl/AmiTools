@@ -5,3 +5,4 @@ test*
 *.egg-info
 build/
 dist/
+log/
