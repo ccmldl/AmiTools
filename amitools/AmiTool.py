@@ -11,7 +11,6 @@ class AmiTools(object):
     """[初始化session和redis,自动创建log文件,loggers属性可以在此模块外使用]
 
     Args:
-        object ([type]): [description]
         LogDir (str): 日志文件目录, 
         ConnString (str): 数据库连接字符串,
         Host (str): redis的主机名, 
