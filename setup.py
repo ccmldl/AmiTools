@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
 setuptools.setup(
-    name="AmiTool",
+    name="amitools",
     version="0.1.0",
     author="ccmldl",
     author_email="1738407610@qq.com",
