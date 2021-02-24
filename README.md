@@ -3,8 +3,9 @@
 
 ## 使用方法
 ```python
-pip install amitools
+pip install amitool
 
+from amitools.AmiTool import AmiTools
 ami = AmiTools(LogDir="./log", ConnString="", Host="127.0.0.1", PassWord="", Port=6379, db=10)  # 参数不用全填
 logger = ami.loggers
 logger.info("start session")
